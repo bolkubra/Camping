@@ -7,8 +7,8 @@ namespace Entities.Concrete
 {
     public class District : IEntity
     {
-        public int Id { get; set; }
+        public int DistinctId { get; set; }
         public int CityId { get; set; }
-        public int DistinctName { get; set; }
+        public string DistinctName { get; set; }
     }
 }
