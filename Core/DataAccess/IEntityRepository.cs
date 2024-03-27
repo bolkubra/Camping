@@ -1,10 +1,10 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     // new Ientity değilde sadece sınıfları çekmek için
     public interface IEntityRepository<T> where T : class, IEntity , new()// where şartı sadece bizim oluşturduğımuz classları yazabilmek için

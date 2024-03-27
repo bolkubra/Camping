@@ -7,12 +7,12 @@ using System.Text;
 
 namespace Business.Concrete
 {
-    public class CityManager : ICityService
+    public class DistrictManager : IDistrictService
     {
-        ICityDal _cityDal;
-        public List<City> GetAll()
+        IDistrictDal _districtDal;
+        public List<District> GetAll()
         {
-            return _cityDal.GetAll();
+            return _districtDal.GetAll();
         }
     }
 }

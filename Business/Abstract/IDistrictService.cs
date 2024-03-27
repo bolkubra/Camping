@@ -5,9 +5,8 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    //city ile ilgili dış dünyaya neler sergileyeceğimi burda listeleriz
-    public interface ICityService
+    public interface IDistrictService
     {
-        List<City> GetAll();
+        List<District> GetAll();
     }
 }
