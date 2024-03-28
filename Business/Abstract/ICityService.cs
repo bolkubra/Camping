@@ -11,5 +11,7 @@ namespace Business.Abstract
     {
         List<City> GetAll();
         public List<CityDetailDto> GetCityDetails();
+
+        void  Add(City city);
     }
 }

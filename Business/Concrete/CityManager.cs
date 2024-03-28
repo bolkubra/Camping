@@ -11,6 +11,12 @@ namespace Business.Concrete
     public class CityManager : ICityService
     {
         ICityDal _cityDal;
+
+        public void Add(City city)
+        {
+            _cityDal.Add(city);
+        }
+
         public List<City> GetAll()
         {
             return _cityDal.GetAll();
