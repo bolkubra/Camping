@@ -2,6 +2,7 @@
 using Business.Constans;
 using Core.Utilities.Result;
 using DataAccess.Abstract;
+using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Entities.DTOs;
 using System;
@@ -13,6 +14,14 @@ namespace Business.Concrete
     public class CityManager : ICityService
     {
         ICityDal _cityDal;
+       
+
+        public CityManager(ICityDal cityDal)
+        {
+            _cityDal = cityDal;
+        }
+
+
 
         public IResult Add(City city)
         {
