@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Result;
+using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,6 @@ namespace Business.Abstract
         List<City> GetAll();
         public List<CityDetailDto> GetCityDetails();
 
-        void  Add(City city);
+        IResult  Add(City city);
     }
 }

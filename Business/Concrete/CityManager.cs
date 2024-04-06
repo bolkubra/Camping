@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constans;
+using Core.Utilities.Result;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using Entities.DTOs;
@@ -12,9 +14,10 @@ namespace Business.Concrete
     {
         ICityDal _cityDal;
 
-        public void Add(City city)
+        public IResult Add(City city)
         {
             _cityDal.Add(city);
+            return new SuccessResult(Messages.CityAdded);
         }
 
         public List<City> GetAll()
