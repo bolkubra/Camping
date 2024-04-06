@@ -20,9 +20,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CityAdded);
         }
 
-        public List<City> GetAll()
+        public IDataResult< List<City>> GetAll()
         {
-            return _cityDal.GetAll();
+            return  new DataResult<List<City>>( _cityDal.GetAll(),true,"City Listed");
         }
 
         public List<CityDetailDto> GetCityDetails()

@@ -10,7 +10,7 @@ namespace Business.Abstract
     //city ile ilgili dış dünyaya neler sergileyeceğimi burda listeleriz
     public interface ICityService
     {
-        List<City> GetAll();
+        IDataResult<List<City>> GetAll();
         public List<CityDetailDto> GetCityDetails();
 
         IResult  Add(City city);
