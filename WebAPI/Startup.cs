@@ -32,6 +32,8 @@ namespace WebAPI
             services.AddControllers();
             services.AddSingleton<ICityService,CityManager>();
             services.AddSingleton<ICityDal, EfCityDal>();
+            services.AddSingleton<ICapmPlaceService, CampPlaceManager>();
+            services.AddSingleton<ICampPlaceDal, EfCampPlaceDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
