@@ -20,14 +20,15 @@ namespace Business.Concrete
             _campPlaceDal = campPlaceDal;
         }
 
-        public List<CampPlaceDetailDto> GetCampPalceDetails()
-        {
-            return _campPlaceDal.GetCampPlaceDetails();
-        }
 
         public IDataResult<List<CampPlace>> GetAll()
         {
             return new DataResult<List<CampPlace>>(_campPlaceDal.GetAll(), true, "CampPlace Listed");
+        }
+
+        public List<CampPlaceDetailDto> GetCampPalceDetails(int cityId)
+        {
+            return _campPlaceDal.GetCampPlaceDetails(cityId);
         }
     }
 }

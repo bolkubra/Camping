@@ -9,6 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface ICampPlaceDal : IEntityRepository<CampPlace>
     {
-        List<CampPlaceDetailDto> GetCampPlaceDetails();
+        List<CampPlaceDetailDto> GetCampPlaceDetails(int cityId);
     }
 }
