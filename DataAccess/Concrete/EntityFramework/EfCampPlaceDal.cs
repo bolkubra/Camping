@@ -4,7 +4,7 @@ using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
-using System.Linq; // LINQ kullanacağınız için bu using ifadesini ekledim
+using System.Linq; 
 using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
@@ -18,7 +18,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from camp in context.CampPlaces
                              join city in context.Citys on camp.CityId equals city.CityId
-                             where city.CityId == cityId
+                             where camp.CityId == cityId
                              select new CampPlaceDetailDto
                              {
                                  CityName = city.CityName,

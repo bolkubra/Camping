@@ -9,7 +9,9 @@ namespace Business.Abstract
 {
     public interface ICapmPlaceService
     {
-       IDataResult< List<CampPlace>> GetAll();
-       public List<CampPlaceDetailDto> GetCampPalceDetails(int cityId);
+       IDataResult<List<CampPlace>> GetAll();
+       IDataResult<CampPlace> GetById(int cityId);
+
+       IDataResult<List<CampPlaceDetailDto>> GetCampPalceDetails(int cityId);
     }
 }
