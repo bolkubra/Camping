@@ -11,8 +11,14 @@ namespace Business.Abstract
     public interface ICityService
     {
         IDataResult<List<City>> GetAll();
+
+        IResult Add(City city);
+        IResult Delete(City city);
+        IResult Updated(City city);
+
+
         public List<CityDetailDto> GetCityDetails();
 
-        IResult  Add(City city);
+       
     }
 }

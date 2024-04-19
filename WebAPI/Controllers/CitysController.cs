@@ -32,6 +32,41 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        
+
+        [HttpGet("insert")]
+        public IActionResult Insert(City city) 
+        {
+            var result = _cityService.Add(city);
+            if(result.Success)
+            {
+                 return Ok(result);
+
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("delete")]
+        public IActionResult Delete(City city)
+        {
+            var result = _cityService.Delete(city);
+            if (result.Success)
+            {
+                return Ok(result);
+
+            }
+            return BadRequest(result);
+        }
+        [HttpGet("update")]
+        public IActionResult Update(City city)
+        {
+            var result = _cityService.Updated(city);
+            if (result.Success)
+            {
+                return Ok(result);
+
+            }
+            return BadRequest(result);
+        }
+
     }
 }
