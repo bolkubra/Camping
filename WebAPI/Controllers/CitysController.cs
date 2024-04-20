@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("insert")]
+        [HttpPost("insert")]
         public IActionResult Insert(City city) 
         {
             var result = _cityService.Add(city);
@@ -45,7 +45,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("delete")]
+        [HttpPost("delete")]
         public IActionResult Delete(City city)
         {
             var result = _cityService.Delete(city);
@@ -56,7 +56,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpGet("update")]
+        [HttpPost("update")]
         public IActionResult Update(City city)
         {
             var result = _cityService.Updated(city);
